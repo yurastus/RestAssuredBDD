@@ -10,24 +10,28 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static sharedData.Constants.*;
 
-public class SearchCustomer {
+public class SearchUser {
 
     @When("admin searches for all users")
     @Loggable(message = "@When")
     public void adminSearchesForAllUsers(){
+
         CRUD.httpGet();
     }
 
     @When("admin searches for user with id '(\\d+)'")
     @Loggable(message = "@When")
     public void adminSearchesForUserWithId(int userId){
+
         CRUD.httpGet(userId);
     }
 
     @And("found user should have id '(\\d+)'")
     @Loggable(message = "@And")
     public void foundUserShouldHaveId(int idInResponse){
-        VALIDATABLE_RESPONSE.get().body("id", equalTo(idInResponse));
+
+        if (RESPONSE.get().statusCode() == 201)
+            VALIDATABLE_RESPONSE.get().body("id", equalTo(idInResponse));
     }
 
     @And("total users amount should be '(\\d+)'")

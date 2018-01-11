@@ -13,6 +13,29 @@ public class CRUD {
     private CRUD(){}
 
 
+    public static void httpPost(IModel model){
+        Response response = REQUEST_SPECIFICATION.get().body(model).when().post();
+        RESPONSE.set(response);
+
+        log.info(response.getBody().asString());
+    }
+
+
+    public static void httpPut(String id, IModel model){
+        Response response = REQUEST_SPECIFICATION.get().body(model).when().put(id);
+        RESPONSE.set(response);
+
+        log.info(response.getBody().asString());
+    }
+
+
+    public static void httpDelete(String userId){
+        RESPONSE.set(when().delete(userId));
+
+        log.info(RESPONSE.get().getBody().asString());
+    }
+
+
     public static void httpGet(){
         httpGet("");
     }
@@ -26,13 +49,5 @@ public class CRUD {
 
         log.info(RESPONSE.get().getBody().asString());
     }
-
-    public static void httpPost(IModel model){
-        Response response = REQUEST_SPECIFICATION.get().body(model).when().post();
-        RESPONSE.set(response);
-
-        log.info(response.getBody().asString());
-    }
-
 
 }
