@@ -6,7 +6,6 @@ import dataModels.User;
 import framework.annotations.Loggable;
 import tools.CRUD;
 import tools.JacksonUtils;
-import tools.PropertyLoader;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static sharedData.Constants.*;
@@ -16,15 +15,13 @@ public class SearchCustomer {
     @When("admin searches for all users")
     @Loggable(message = "@When")
     public void adminSearchesForAllUsers(){
-        String url = PropertyLoader.load("url") + "users";
-        CRUD.httpGet(url);
+        CRUD.httpGet();
     }
 
     @When("admin searches for user with id '(\\d+)'")
     @Loggable(message = "@When")
     public void adminSearchesForUserWithId(int userId){
-        String url = PropertyLoader.load("url") + "users/" + userId;
-        CRUD.httpGet(url);
+        CRUD.httpGet(userId);
     }
 
     @And("found user should have id '(\\d+)'")

@@ -1,14 +1,14 @@
-Feature: search specific customer
+Feature: search specific users
 
   @Smoke
-  Scenario: search all customers
+  Scenario: search all users
     Given admin 'admin' is logged in
     When admin searches for all users
     Then response status should be '200'
     And total users amount should be '10'
 
   @Regression
-  Scenario Outline: search existing customer by id
+  Scenario Outline: search existing users by id
     Given admin 'admin' is logged in
     When admin searches for user with id '<id>'
     Then response status should be '<statusCode>'

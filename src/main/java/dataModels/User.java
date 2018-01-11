@@ -12,12 +12,14 @@ import lombok.NoArgsConstructor;
 public class User implements IModel{
 
     private int id;
+
     private String name;
     private String username;
     private String email;
-    private Address address;
     private String phone;
     private String website;
+
+    private Address address;
     private Company company;
 
 }
