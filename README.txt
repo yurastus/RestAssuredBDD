@@ -11,4 +11,4 @@ using cucumber and rest-assured dependencies
 
 2) Run tests using test runner class
     run tests using 'APITestsRunner.java'
-    to see reports open: output/index.html
+    to see reports open: 'output/index.html'

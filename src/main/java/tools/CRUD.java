@@ -2,12 +2,11 @@ package tools;
 
 import dataModels.IModel;
 import io.restassured.response.Response;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import static io.restassured.RestAssured.*;
-import static sharedData.Constants.REQUEST_SPECIFICATION;
-import static sharedData.Constants.RESPONSE;
+import static sharedData.Constants.*;
 
-@Log4j
+@Slf4j
 public class CRUD {
 
     private CRUD(){}

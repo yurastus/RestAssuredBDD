@@ -10,11 +10,13 @@ import dataModels.User;
 import framework.annotations.Loggable;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import lombok.extern.slf4j.Slf4j;
 import tools.PropertyLoader;
 import static io.restassured.RestAssured.given;
 import static sharedData.Constants.*;
 import static tools.RandomGenerator.generateIfRandom;
 
+@Slf4j
 public class Common {
 
     private User expectedUser;

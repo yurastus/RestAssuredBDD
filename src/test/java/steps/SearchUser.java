@@ -4,12 +4,14 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import dataModels.User;
 import framework.annotations.Loggable;
+import lombok.extern.slf4j.Slf4j;
 import tools.CRUD;
 import tools.JacksonUtils;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static sharedData.Constants.*;
 
+@Slf4j
 public class SearchUser {
 
     @When("admin searches for all users")

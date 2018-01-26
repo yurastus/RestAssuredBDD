@@ -1,7 +1,7 @@
 package framework.aspect;
 
 import framework.annotations.Loggable;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@Log4j
+@Slf4j
 @Aspect
 public class LoggableAspect {
 
