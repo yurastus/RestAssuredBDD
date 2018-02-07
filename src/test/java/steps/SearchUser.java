@@ -3,7 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import dataModels.User;
-import framework.annotations.Loggable;
+import logging.annotations.Loggable;
 import lombok.extern.slf4j.Slf4j;
 import tools.CRUD;
 import tools.JacksonUtils;

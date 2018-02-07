@@ -5,6 +5,6 @@
         <include within="*" />
     </weaver>
     <aspects>
-        <aspect name="framework.aspect.LoggableAspect"/>
+        <aspect name="logging.aspect.LoggableAspect"/>
     </aspects>
 </aspectj>

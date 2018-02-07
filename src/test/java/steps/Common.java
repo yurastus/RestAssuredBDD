@@ -7,7 +7,7 @@ import dataModels.Address;
 import dataModels.Company;
 import dataModels.Geo;
 import dataModels.User;
-import framework.annotations.Loggable;
+import logging.annotations.Loggable;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import lombok.extern.slf4j.Slf4j;

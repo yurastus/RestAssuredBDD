@@ -1,4 +1,4 @@
-package framework.annotations;
+package logging.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

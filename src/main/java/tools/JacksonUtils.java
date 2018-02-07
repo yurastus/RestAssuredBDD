@@ -1,7 +1,7 @@
 package tools;
 
 import dataModels.IModel;
-import framework.annotations.Loggable;
+import logging.annotations.Loggable;
 import org.codehaus.jackson.map.ObjectMapper;
 import java.io.IOException;
 

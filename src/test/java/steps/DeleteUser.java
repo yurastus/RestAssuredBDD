@@ -1,7 +1,7 @@
 package steps;
 
 import cucumber.api.java.en.When;
-import framework.annotations.Loggable;
+import logging.annotations.Loggable;
 import tools.CRUD;
 
 public class DeleteUser {
