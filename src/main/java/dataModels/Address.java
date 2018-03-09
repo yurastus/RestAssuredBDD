@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address implements IModel{
+public class Address extends BaseModel {
 
     private String street;
     private String suite;

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Company implements IModel{
+public class Company extends BaseModel {
 
     private String name;
     private String catchPhrase;

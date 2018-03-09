@@ -1,6 +1,6 @@
 package tools;
 
-import dataModels.IModel;
+import dataModels.BaseModel;
 import logging.annotations.Loggable;
 import org.codehaus.jackson.map.ObjectMapper;
 import java.io.IOException;
@@ -12,9 +12,9 @@ public class JacksonUtils {
     private JacksonUtils(){}
 
     @Loggable
-    public static String toJson(IModel model) {
+    public static String toJson(BaseModel model) {
         try {
-            return mapper.writeValueAsString(model);
+            return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(model);
 
         } catch (IOException e) {
             throw new RuntimeException(e);

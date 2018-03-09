@@ -1,6 +1,6 @@
 package tools;
 
-import dataModels.IModel;
+import dataModels.BaseModel;
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import static io.restassured.RestAssured.*;
@@ -12,7 +12,7 @@ public class CRUD {
     private CRUD(){}
 
 
-    public static void httpPost(IModel model){
+    public static void httpPost(BaseModel model){
         Response response = REQUEST_SPECIFICATION.get().body(model).when().post();
         RESPONSE.set(response);
 
@@ -20,7 +20,7 @@ public class CRUD {
     }
 
 
-    public static void httpPut(String id, IModel model){
+    public static void httpPut(String id, BaseModel model){
         Response response = REQUEST_SPECIFICATION.get().body(model).when().put(id);
         RESPONSE.set(response);
 

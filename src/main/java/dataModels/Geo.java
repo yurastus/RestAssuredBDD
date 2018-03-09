@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Geo implements IModel{
+public class Geo extends BaseModel {
 
     private String lat;
     private String lng;

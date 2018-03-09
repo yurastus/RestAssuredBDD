@@ -1,15 +1,12 @@
 package dataModels;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User implements IModel{
+public class User extends BaseModel {
 
     private int id;
 
